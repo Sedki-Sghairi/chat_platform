@@ -1,3 +1,4 @@
+const { Socket } = require('dgram');
 const express = require('express');
 
 const app = express();
@@ -13,6 +14,13 @@ app.get('/', (req, res) => {
 });
 app.get('/:room', (req, res) => {
 	res.render('room', { roomId: req.params.room });
+});
+
+io.on('connection', (socket) => {
+	socket.on('join-room', (roomId, userId) => {
+		console.log('roomId: ', roomId);
+		console.log('userId: ', userId);
+	});
 });
 
 server.listen(3000);
