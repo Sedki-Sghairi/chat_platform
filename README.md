@@ -1,8 +1,3 @@
 # chat_platform
-npm install
-npm install peer -g
-
-npm start
-or
-npm run devStart
+After npm install, run 'npm i peer -g' to install peerjs globally.
 
