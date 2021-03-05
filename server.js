@@ -25,6 +25,6 @@ io.on('connection', (socket) => {
 		});
 	});
 });
-const { PeerServer } = require('peer');
-const peerServer = PeerServer({ port: 3001, path: '/' });
+// const { PeerServer } = require('peer');
+// const peerServer = PeerServer({ port: 3001, path: '/' });
 server.listen(3000);
